@@ -1,0 +1,49 @@
+$primary-color: #272727;
+$accent-color: #b32323;
+$text-color: #fff;
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: $accent-color;
+}
+
+#logo {
+  margin-left: 50px;
+}
+
+#img {
+  margin-right: 50px;
+}
+
+.navItem {
+  display: inline-block;
+  margin: 0px 20px;
+}
+
+body {
+  background: $primary-color;
+  color: $text-color;
+  nav {
+    font-size: 24px;
+  }
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+
+  #{&}_paragraph {
+    font-weight: map-get($font-weights, bold);
+    font-size: 32px;
+
+    &:hover {
+      color: pink;
+    }
+  }
+}
