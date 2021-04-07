@@ -1,3 +1,10 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 #navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5,7 +12,13 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #b32323;
+  font-weight: 400;
+  font-size: 32px;
+  height: 60px;
 }
 
 #logo {
@@ -21,6 +34,10 @@
   margin: 0px 20px;
 }
 
+.navItem:hover {
+  color: grey;
+}
+
 body {
   background: #272727;
   color: #fff;
@@ -31,16 +48,51 @@ body nav {
 }
 
 .main {
-  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 65%;
   margin: 0 auto;
 }
 
-.main .main_paragraph {
-  font-weight: 700;
+.main .main_paragraph1, .main .main_paragraph2, .main .main_paragraph3 {
+  font-weight: 400;
   font-size: 32px;
+  margin: 32px 0px;
 }
 
-.main .main_paragraph:hover {
+.main .main_paragraph1:hover, .main .main_paragraph2:hover, .main .main_paragraph3:hover {
   color: pink;
+}
+
+.main .main_paragraph2:hover {
+  color: #b32323;
+}
+
+.main .main_paragraph3:hover {
+  color: orangered;
+}
+
+@media (max-width: 800px) {
+  .main {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.light {
+  background: white;
+  color: black;
 }
 /*# sourceMappingURL=main.css.map */
